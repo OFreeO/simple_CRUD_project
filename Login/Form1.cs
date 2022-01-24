@@ -26,7 +26,7 @@ namespace Login
         private void button1_Click(object sender, EventArgs e)
         {
             Manager.Check_User(IDBOX.Text, PWBOX.Text);
-            this.Close();
+            this.Hide();
         }
     }
 }

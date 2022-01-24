@@ -12,3 +12,20 @@ C:\Users\user\Desktop\Vip (1)\Login\obj\Debug\Login.csproj.CopyComplete
 C:\Users\user\Desktop\Vip (1)\Login\obj\Debug\Login.exe
 C:\Users\user\Desktop\Vip (1)\Login\obj\Debug\Login.pdb
 C:\Users\user\Desktop\Vip (1)\Login\obj\Debug\Login.Succes.resources
+C:\Users\user\Desktop\simple_CLUE_project\Login\bin\Debug\Login.exe.config
+C:\Users\user\Desktop\simple_CLUE_project\Login\bin\Debug\Login.exe
+C:\Users\user\Desktop\simple_CLUE_project\Login\bin\Debug\Login.pdb
+C:\Users\user\Desktop\simple_CLUE_project\Login\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\user\Desktop\simple_CLUE_project\Login\obj\Debug\Login.csprojAssemblyReference.cache
+C:\Users\user\Desktop\simple_CLUE_project\Login\obj\Debug\Login.ADD.resources
+C:\Users\user\Desktop\simple_CLUE_project\Login\obj\Debug\Login.Form1.resources
+C:\Users\user\Desktop\simple_CLUE_project\Login\obj\Debug\Login.Properties.Resources.resources
+C:\Users\user\Desktop\simple_CLUE_project\Login\obj\Debug\Login.Succes.resources
+C:\Users\user\Desktop\simple_CLUE_project\Login\obj\Debug\Login.csproj.GenerateResource.cache
+C:\Users\user\Desktop\simple_CLUE_project\Login\obj\Debug\Login.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\simple_CLUE_project\Login\obj\Debug\Login.csproj.CopyComplete
+C:\Users\user\Desktop\simple_CLUE_project\Login\obj\Debug\Login.exe
+C:\Users\user\Desktop\simple_CLUE_project\Login\obj\Debug\Login.pdb
+C:\Users\user\Desktop\simple_CLUE_project\Login\bin\Debug\Vip.exe
+C:\Users\user\Desktop\simple_CLUE_project\Login\bin\Debug\Vip.pdb
+C:\Users\user\Desktop\simple_CLUE_project\Login\bin\Debug\Vip.exe.config

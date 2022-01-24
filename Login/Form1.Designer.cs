@@ -83,6 +83,7 @@
             // 
             // button1
             // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("굴림", 12F);
             this.button1.Location = new System.Drawing.Point(267, 298);
             this.button1.Name = "button1";

@@ -434,7 +434,7 @@
             // IDX
             // 
             this.IDX.Text = "No.";
-            this.IDX.Width = 30;
+            this.IDX.Width = 40;
             // 
             // Log
             // 

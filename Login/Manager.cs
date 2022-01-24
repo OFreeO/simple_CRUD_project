@@ -106,9 +106,12 @@ namespace Login
                 if (ID == item["ID"].ToString() && PW == item["PW"].ToString())
                 {
                     i = 1;
-                    Form1 form = new Form1();
-                    Succes s = new Succes();
-                    s.Show();
+                    Vip.Form1 main = new Vip.Form1();
+                    Form1 Login = new Form1();
+                    main.Show();
+                    Login.Close();
+                    
+                    
                 }
             }
             if (i == 0)

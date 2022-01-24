@@ -109,5 +109,11 @@
   <ItemGroup>
     <Content Include="download.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Vip\Vip.csproj">
+      <Project>{99f00a1b-a198-4381-8d12-ddd30ba5f636}</Project>
+      <Name>Vip</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
