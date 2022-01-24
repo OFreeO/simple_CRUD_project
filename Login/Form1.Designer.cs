@@ -78,6 +78,7 @@
             // 
             this.PWBOX.Location = new System.Drawing.Point(89, 348);
             this.PWBOX.Name = "PWBOX";
+            this.PWBOX.PasswordChar = '*';
             this.PWBOX.Size = new System.Drawing.Size(147, 21);
             this.PWBOX.TabIndex = 4;
             // 
