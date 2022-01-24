@@ -1,0 +1,61 @@
+D:\C#\Practice\Vip\Vip\bin\Debug\Vip.exe.config
+D:\C#\Practice\Vip\Vip\bin\Debug\Vip.exe
+D:\C#\Practice\Vip\Vip\bin\Debug\Vip.pdb
+D:\C#\Practice\Vip\Vip\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\C#\Practice\Vip\Vip\bin\Debug\Oracle.ManagedDataAccess.dll
+D:\C#\Practice\Vip\Vip\bin\Debug\System.Buffers.dll
+D:\C#\Practice\Vip\Vip\bin\Debug\System.Memory.dll
+D:\C#\Practice\Vip\Vip\bin\Debug\System.Numerics.Vectors.dll
+D:\C#\Practice\Vip\Vip\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\C#\Practice\Vip\Vip\bin\Debug\System.Text.Encodings.Web.dll
+D:\C#\Practice\Vip\Vip\bin\Debug\System.Text.Json.dll
+D:\C#\Practice\Vip\Vip\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\C#\Practice\Vip\Vip\bin\Debug\System.ValueTuple.dll
+D:\C#\Practice\Vip\Vip\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\C#\Practice\Vip\Vip\bin\Debug\System.Buffers.xml
+D:\C#\Practice\Vip\Vip\bin\Debug\System.Memory.xml
+D:\C#\Practice\Vip\Vip\bin\Debug\System.Numerics.Vectors.xml
+D:\C#\Practice\Vip\Vip\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\C#\Practice\Vip\Vip\bin\Debug\System.Text.Encodings.Web.xml
+D:\C#\Practice\Vip\Vip\bin\Debug\System.Text.Json.xml
+D:\C#\Practice\Vip\Vip\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\C#\Practice\Vip\Vip\bin\Debug\System.ValueTuple.xml
+D:\C#\Practice\Vip\Vip\obj\Debug\Vip.csproj.SuggestedBindingRedirects.cache
+D:\C#\Practice\Vip\Vip\obj\Debug\Vip.Form1.resources
+D:\C#\Practice\Vip\Vip\obj\Debug\Vip.Properties.Resources.resources
+D:\C#\Practice\Vip\Vip\obj\Debug\Vip.csproj.GenerateResource.cache
+D:\C#\Practice\Vip\Vip\obj\Debug\Vip.csproj.CoreCompileInputs.cache
+D:\C#\Practice\Vip\Vip\obj\Debug\Vip.csproj.CopyComplete
+D:\C#\Practice\Vip\Vip\obj\Debug\Vip.exe
+D:\C#\Practice\Vip\Vip\obj\Debug\Vip.pdb
+D:\C#\Practice\Vip\Vip\obj\Debug\Vip.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\Vip (1)\Vip\bin\Debug\Vip.exe.config
+C:\Users\user\Desktop\Vip (1)\Vip\bin\Debug\Vip.exe
+C:\Users\user\Desktop\Vip (1)\Vip\bin\Debug\Vip.pdb
+C:\Users\user\Desktop\Vip (1)\Vip\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\user\Desktop\Vip (1)\Vip\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\user\Desktop\Vip (1)\Vip\bin\Debug\System.Buffers.dll
+C:\Users\user\Desktop\Vip (1)\Vip\bin\Debug\System.Memory.dll
+C:\Users\user\Desktop\Vip (1)\Vip\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\user\Desktop\Vip (1)\Vip\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\user\Desktop\Vip (1)\Vip\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\user\Desktop\Vip (1)\Vip\bin\Debug\System.Text.Json.dll
+C:\Users\user\Desktop\Vip (1)\Vip\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\user\Desktop\Vip (1)\Vip\bin\Debug\System.ValueTuple.dll
+C:\Users\user\Desktop\Vip (1)\Vip\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\user\Desktop\Vip (1)\Vip\bin\Debug\System.Buffers.xml
+C:\Users\user\Desktop\Vip (1)\Vip\bin\Debug\System.Memory.xml
+C:\Users\user\Desktop\Vip (1)\Vip\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\user\Desktop\Vip (1)\Vip\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\user\Desktop\Vip (1)\Vip\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\user\Desktop\Vip (1)\Vip\bin\Debug\System.Text.Json.xml
+C:\Users\user\Desktop\Vip (1)\Vip\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\user\Desktop\Vip (1)\Vip\bin\Debug\System.ValueTuple.xml
+C:\Users\user\Desktop\Vip (1)\Vip\obj\Debug\Vip.csprojAssemblyReference.cache
+C:\Users\user\Desktop\Vip (1)\Vip\obj\Debug\Vip.Form1.resources
+C:\Users\user\Desktop\Vip (1)\Vip\obj\Debug\Vip.Properties.Resources.resources
+C:\Users\user\Desktop\Vip (1)\Vip\obj\Debug\Vip.csproj.GenerateResource.cache
+C:\Users\user\Desktop\Vip (1)\Vip\obj\Debug\Vip.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Vip (1)\Vip\obj\Debug\Vip.csproj.CopyComplete
+C:\Users\user\Desktop\Vip (1)\Vip\obj\Debug\Vip.exe
+C:\Users\user\Desktop\Vip (1)\Vip\obj\Debug\Vip.pdb
