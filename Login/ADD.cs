@@ -21,6 +21,7 @@ namespace Login
         {
             a = true;
             if(PWBOX.Text != PW_CHKBOX.Text)
+                //비밀번호와 비밀번호 확인의 동일 유무 확인
             {
                 MessageBox.Show("비밀번호가 서로 다릅니다.");
                 a = false;
@@ -28,6 +29,7 @@ namespace Login
             }
             else
             {
+                //회원가입 로직으로 이동
                 Manager.ADD(IDBOX.Text,PWBOX.Text,CODE.Text);
                 a = true;
                 return a;
@@ -42,6 +44,14 @@ namespace Login
                 this.Close();
             else
                 return;
+        }
+
+        private void ADD_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                ADDbtn_Click(sender, e);
+            }
         }
     }
 }

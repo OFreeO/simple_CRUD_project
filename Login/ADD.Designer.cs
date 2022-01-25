@@ -139,7 +139,8 @@
             this.Controls.Add(this.IDBOX);
             this.Controls.Add(this.label1);
             this.Name = "ADD";
-            this.Text = "ADD";
+            this.Text = "사용자 추가";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ADD_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

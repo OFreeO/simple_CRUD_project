@@ -28,5 +28,13 @@ namespace Login
             Manager.Check_User(IDBOX.Text, PWBOX.Text);
             this.Hide();
         }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                button1_Click(sender, e);
+            }
+        }
     }
 }

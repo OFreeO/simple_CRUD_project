@@ -31,12 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.MemberView = new System.Windows.Forms.DataGridView();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.juminDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gradeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.memberBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Updatebtn = new System.Windows.Forms.Button();
             this.Addbtn = new System.Windows.Forms.Button();
@@ -67,13 +61,19 @@
             this.listView1 = new System.Windows.Forms.ListView();
             this.IDX = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Log = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.juminDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gradeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.memberBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MemberView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox3
@@ -110,52 +110,6 @@
             this.MemberView.TabIndex = 0;
             this.MemberView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MemberView_CellClick);
             this.MemberView.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.MemberView_CellFormatting);
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // juminDataGridViewTextBoxColumn
-            // 
-            this.juminDataGridViewTextBoxColumn.DataPropertyName = "Jumin";
-            this.juminDataGridViewTextBoxColumn.HeaderText = "Jumin";
-            this.juminDataGridViewTextBoxColumn.Name = "juminDataGridViewTextBoxColumn";
-            this.juminDataGridViewTextBoxColumn.ReadOnly = true;
-            this.juminDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // phoneNumDataGridViewTextBoxColumn
-            // 
-            this.phoneNumDataGridViewTextBoxColumn.DataPropertyName = "PhoneNum";
-            this.phoneNumDataGridViewTextBoxColumn.HeaderText = "PhoneNum";
-            this.phoneNumDataGridViewTextBoxColumn.Name = "phoneNumDataGridViewTextBoxColumn";
-            this.phoneNumDataGridViewTextBoxColumn.ReadOnly = true;
-            this.phoneNumDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // gradeDataGridViewTextBoxColumn
-            // 
-            this.gradeDataGridViewTextBoxColumn.DataPropertyName = "Grade";
-            this.gradeDataGridViewTextBoxColumn.HeaderText = "Grade";
-            this.gradeDataGridViewTextBoxColumn.Name = "gradeDataGridViewTextBoxColumn";
-            this.gradeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.gradeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // addTimeDataGridViewTextBoxColumn
-            // 
-            this.addTimeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.addTimeDataGridViewTextBoxColumn.DataPropertyName = "AddTime";
-            this.addTimeDataGridViewTextBoxColumn.HeaderText = "AddTime";
-            this.addTimeDataGridViewTextBoxColumn.Name = "addTimeDataGridViewTextBoxColumn";
-            this.addTimeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.addTimeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.addTimeDataGridViewTextBoxColumn.Width = 81;
-            // 
-            // memberBindingSource
-            // 
-            this.memberBindingSource.DataSource = typeof(Vip.Member);
             // 
             // groupBox1
             // 
@@ -441,6 +395,52 @@
             this.Log.Text = "기록";
             this.Log.Width = 360;
             // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // juminDataGridViewTextBoxColumn
+            // 
+            this.juminDataGridViewTextBoxColumn.DataPropertyName = "Jumin";
+            this.juminDataGridViewTextBoxColumn.HeaderText = "Jumin";
+            this.juminDataGridViewTextBoxColumn.Name = "juminDataGridViewTextBoxColumn";
+            this.juminDataGridViewTextBoxColumn.ReadOnly = true;
+            this.juminDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // phoneNumDataGridViewTextBoxColumn
+            // 
+            this.phoneNumDataGridViewTextBoxColumn.DataPropertyName = "PhoneNum";
+            this.phoneNumDataGridViewTextBoxColumn.HeaderText = "PhoneNum";
+            this.phoneNumDataGridViewTextBoxColumn.Name = "phoneNumDataGridViewTextBoxColumn";
+            this.phoneNumDataGridViewTextBoxColumn.ReadOnly = true;
+            this.phoneNumDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // gradeDataGridViewTextBoxColumn
+            // 
+            this.gradeDataGridViewTextBoxColumn.DataPropertyName = "Grade";
+            this.gradeDataGridViewTextBoxColumn.HeaderText = "Grade";
+            this.gradeDataGridViewTextBoxColumn.Name = "gradeDataGridViewTextBoxColumn";
+            this.gradeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.gradeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // addTimeDataGridViewTextBoxColumn
+            // 
+            this.addTimeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.addTimeDataGridViewTextBoxColumn.DataPropertyName = "AddTime";
+            this.addTimeDataGridViewTextBoxColumn.HeaderText = "AddTime";
+            this.addTimeDataGridViewTextBoxColumn.Name = "addTimeDataGridViewTextBoxColumn";
+            this.addTimeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.addTimeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.addTimeDataGridViewTextBoxColumn.Width = 81;
+            // 
+            // memberBindingSource
+            // 
+            this.memberBindingSource.DataSource = typeof(Vip.Member);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -458,11 +458,11 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MemberView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -471,6 +471,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

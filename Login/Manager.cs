@@ -10,7 +10,7 @@ namespace Login
 {
     class Manager
     {
-
+        //DB 접속 정보
         const string ORADB = "Data Source=(DESCRIPTION=(ADDRESS_LIST=" +
       "(ADDRESS=(PROTOCOL=TCP)(HOST=KB-PC)(PORT=1521)))" +
       "(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=orcl)));" +
@@ -24,6 +24,7 @@ namespace Login
 
         static void ConnectDB()
         {
+            //DB접속 클래스
             try
             {
                 OraConn.Open();
@@ -40,32 +41,39 @@ namespace Login
             ConnectDB();
             try
             {
+                //sql문
                 string sql = $"select * from {table}";
+                //새 접속
                 OracleDataAdapter oda = new OracleDataAdapter();
+                //오라클 생성
                 oda.SelectCommand = new OracleCommand();
+                //오라클 접속 참조
                 oda.SelectCommand.Connection = OraConn;
+                //sql 삽입
                 oda.SelectCommand.CommandText = sql;
 
+                //데이터셋 선언
                 DataSet ds = new DataSet();
+                //table 내 데이터를 데이터셋에 적용
                 oda.Fill(ds, table);
 
                 login.Clear();
-
+                //존재하는 아이템 값 확인
                 foreach(DataRow item in ds.Tables[0].Rows)
                 {
                     Login_Info login = new Login_Info();
                     if (ID == item["ID"].ToString())
-                    {
+                    {//생성 아이디와 기존 아이디 중복 여부 체크
                         System.Windows.Forms.MessageBox.Show("이미 있는 아이디 입니다.");
                         return;
                     }
                     if (C != "Free")
-                    {
+                    {//등록 승인 코드 일치 여부 확인
                         System.Windows.Forms.MessageBox.Show("승인 코드가 틀립니다.");
                         return;
                     }
                     else
-                    {
+                    {//등록 구문
                         sql = $"insert into {table} values ('{ID}','{PW}')";
                         System.Windows.Forms.MessageBox.Show("등록되었습니다.");
                         OracleCommand cmd = new OracleCommand();
@@ -86,35 +94,48 @@ namespace Login
             OraConn.Close();
         }
         public static void Check_User(string ID, string PW)
-        {
+        {//로그인 클래스
             ConnectDB();
 
+            //sql문
             string sql = $"select * from {table}";
+            //새 접속선언
             OracleDataAdapter oda = new OracleDataAdapter();
+            //oracle 관련문 선언
             oda.SelectCommand = new OracleCommand();
+            //oracle 접속 선언
             oda.SelectCommand.Connection = OraConn;
+            //sql문 사용
             oda.SelectCommand.CommandText = sql;
-
+            
+            //데이터셋 선언
             DataSet ds = new DataSet();
+            //데이터셋을 접속한 DB의 테이블 내용 적용
             oda.Fill(ds, table);
 
             login.Clear();
-
+            // 확인용 i 선언
             int i = 0;
             foreach(DataRow item in ds.Tables[0].Rows)
             {
                 Login_Info login = new Login_Info();
                 if (ID == item["ID"].ToString() && PW == item["PW"].ToString())
                 {
+                    //정보가 일치시 i 를 1로 변경
                     i = 1;
+                    //멤버관리창 선언
+ 
                     Vip.Form1 main = new Vip.Form1();
+                    //로그인 창 선언
                     Form1 Login = new Form1();
+                    //멤버관리창 호출
                     main.Show();
-                    Login.Close();
+                    Login.Hide();
                 }
             }
             if (i == 0)
             {
+                //모두 비교하여도 i가 0인경우 안내메세지 도출
                 System.Windows.Forms.MessageBox.Show("아이디 혹은 비밀번호를 확인해주세요.");
             }
         }
