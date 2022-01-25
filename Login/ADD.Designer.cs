@@ -60,6 +60,7 @@
             // 
             this.PWBOX.Location = new System.Drawing.Point(166, 78);
             this.PWBOX.Name = "PWBOX";
+            this.PWBOX.PasswordChar = '*';
             this.PWBOX.Size = new System.Drawing.Size(100, 21);
             this.PWBOX.TabIndex = 3;
             // 
@@ -76,6 +77,7 @@
             // 
             this.PW_CHKBOX.Location = new System.Drawing.Point(166, 118);
             this.PW_CHKBOX.Name = "PW_CHKBOX";
+            this.PW_CHKBOX.PasswordChar = '*';
             this.PW_CHKBOX.Size = new System.Drawing.Size(100, 21);
             this.PW_CHKBOX.TabIndex = 5;
             // 
@@ -92,6 +94,7 @@
             // 
             this.CODE.Location = new System.Drawing.Point(166, 159);
             this.CODE.Name = "CODE";
+            this.CODE.PasswordChar = '*';
             this.CODE.Size = new System.Drawing.Size(100, 21);
             this.CODE.TabIndex = 7;
             // 

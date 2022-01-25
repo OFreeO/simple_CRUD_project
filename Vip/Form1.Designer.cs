@@ -133,6 +133,7 @@
             // 
             // Updatebtn
             // 
+            this.Updatebtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Updatebtn.Location = new System.Drawing.Point(23, 139);
             this.Updatebtn.Name = "Updatebtn";
             this.Updatebtn.Size = new System.Drawing.Size(142, 23);
@@ -143,6 +144,7 @@
             // 
             // Addbtn
             // 
+            this.Addbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Addbtn.Location = new System.Drawing.Point(23, 108);
             this.Addbtn.Name = "Addbtn";
             this.Addbtn.Size = new System.Drawing.Size(142, 23);
@@ -284,6 +286,7 @@
             // 
             // Delbtn
             // 
+            this.Delbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Delbtn.Location = new System.Drawing.Point(117, 109);
             this.Delbtn.Name = "Delbtn";
             this.Delbtn.Size = new System.Drawing.Size(75, 23);
@@ -336,6 +339,7 @@
             // 
             // Find
             // 
+            this.Find.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Find.Location = new System.Drawing.Point(117, 109);
             this.Find.Name = "Find";
             this.Find.Size = new System.Drawing.Size(75, 23);
@@ -355,6 +359,7 @@
             // 
             // quit
             // 
+            this.quit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.quit.Location = new System.Drawing.Point(1165, 753);
             this.quit.Name = "quit";
             this.quit.Size = new System.Drawing.Size(125, 50);
@@ -365,6 +370,7 @@
             // 
             // Look_log
             // 
+            this.Look_log.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Look_log.Location = new System.Drawing.Point(1165, 674);
             this.Look_log.Name = "Look_log";
             this.Look_log.Size = new System.Drawing.Size(125, 50);

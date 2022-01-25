@@ -34,7 +34,7 @@ namespace Vip
         {
             ConnectDB();
 
-            string sql = $"select * from {Table} where jumin = '{f}'";
+            string sql = $"select * from {Table} where Phonenum = '{f}'";
             int i = 0;
             OracleDataAdapter oda = new OracleDataAdapter();
             oda.SelectCommand = new OracleCommand();
@@ -45,7 +45,7 @@ namespace Vip
             oda.Fill(ds, Table);
             foreach (DataRow item in ds.Tables[0].Rows)
             {
-                if (f.Equals(item["jumin"]))
+                if (f.Equals(item["Phonenum"]))
                 {
                     System.Windows.Forms.MessageBox.Show($"성함 : {item["Name"]}\n주민번호 : {item["jumin"]}\n" +
                         $"전화번호 : {item["Phonenum"]}\n멤버쉽 등급 : {item["grade"]}");
