@@ -12,7 +12,7 @@ namespace Login
     {
 
         const string ORADB = "Data Source=(DESCRIPTION=(ADDRESS_LIST=" +
-      "(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521)))" +
+      "(ADDRESS=(PROTOCOL=TCP)(HOST=KB-PC)(PORT=1521)))" +
       "(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=orcl)));" +
       "User Id=test;Password=1234;";
 
@@ -67,6 +67,7 @@ namespace Login
                     else
                     {
                         sql = $"insert into {table} values ('{ID}','{PW}')";
+                        System.Windows.Forms.MessageBox.Show("등록되었습니다.");
                         OracleCommand cmd = new OracleCommand();
                         cmd.Connection = OraConn;
                         cmd.CommandText = sql;
@@ -110,14 +111,11 @@ namespace Login
                     Form1 Login = new Form1();
                     main.Show();
                     Login.Close();
-                    
-                    
                 }
             }
             if (i == 0)
             {
                 System.Windows.Forms.MessageBox.Show("아이디 혹은 비밀번호를 확인해주세요.");
-                return;
             }
         }
     }

@@ -8,7 +8,7 @@ namespace Vip
     public class Manager
     {
         const string ORADB = "Data Source=(DESCRIPTION=(ADDRESS_LIST=" +
-              "(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521)))" +
+              "(ADDRESS=(PROTOCOL=TCP)(HOST=KB-PC)(PORT=1521)))" +
               "(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=orcl)));" +
               "User Id=test;Password=1234;";
         public static OracleConnection OraConn = new OracleConnection(ORADB);

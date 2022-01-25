@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "bdeb68c8-a3ef-404f-9853-0927d6a110b5": {
+      "ProjectGuid": "bdeb68c8-a3ef-404f-9853-0927d6a110b5",
+      "DisplayName": "Login",
+      "ColorIndex": 0
+    },
+    "99f00a1b-a198-4381-8d12-ddd30ba5f636": {
+      "ProjectGuid": "99f00a1b-a198-4381-8d12-ddd30ba5f636",
+      "DisplayName": "Vip",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
