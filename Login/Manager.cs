@@ -38,6 +38,7 @@ namespace Login
        
         public static void ADD(string ID,string PW, string C)
         {
+            //접속
             ConnectDB();
             try
             {
@@ -58,31 +59,36 @@ namespace Login
                 oda.Fill(ds, table);
 
                 login.Clear();
+                int i = 1;
                 //존재하는 아이템 값 확인
-                foreach(DataRow item in ds.Tables[0].Rows)
+                foreach (DataRow item in ds.Tables[0].Rows)
                 {
                     Login_Info login = new Login_Info();
                     if (ID == item["ID"].ToString())
                     {//생성 아이디와 기존 아이디 중복 여부 체크
                         System.Windows.Forms.MessageBox.Show("이미 있는 아이디 입니다.");
-                        return;
+                        OraConn.Close();
+                        i = 0;
+                        break;
                     }
                     if (C != "Free")
                     {//등록 승인 코드 일치 여부 확인
                         System.Windows.Forms.MessageBox.Show("승인 코드가 틀립니다.");
-                        return;
-                    }
-                    else
-                    {//등록 구문
-                        sql = $"insert into {table} values ('{ID}','{PW}')";
-                        System.Windows.Forms.MessageBox.Show("등록되었습니다.");
-                        OracleCommand cmd = new OracleCommand();
-                        cmd.Connection = OraConn;
-                        cmd.CommandText = sql;
-                        cmd.ExecuteNonQuery();
-
+                        OraConn.Close();
+                        i = 0;
+                        break;
                     }
                 }
+                if(i == 1)
+                {//등록 구문
+                    sql = $"insert into {table} values ('{ID}','{PW}')";
+                    System.Windows.Forms.MessageBox.Show("등록되었습니다.");
+                    OracleCommand cmd = new OracleCommand();
+                    cmd.Connection = OraConn;
+                    cmd.CommandText = sql;
+                    cmd.ExecuteNonQuery();
+                }
+                OraConn.Close();
             }
             catch (Exception ex)
             {
@@ -92,52 +98,66 @@ namespace Login
   
             }
             OraConn.Close();
+            //접속해제
         }
-        public static void Check_User(string ID, string PW)
+        public static bool Check_User(string ID, string PW)
         {//로그인 클래스
             ConnectDB();
-
-            //sql문
-            string sql = $"select * from {table}";
-            //새 접속선언
-            OracleDataAdapter oda = new OracleDataAdapter();
-            //oracle 관련문 선언
-            oda.SelectCommand = new OracleCommand();
-            //oracle 접속 선언
-            oda.SelectCommand.Connection = OraConn;
-            //sql문 사용
-            oda.SelectCommand.CommandText = sql;
-            
-            //데이터셋 선언
-            DataSet ds = new DataSet();
-            //데이터셋을 접속한 DB의 테이블 내용 적용
-            oda.Fill(ds, table);
-
-            login.Clear();
-            // 확인용 i 선언
-            int i = 0;
-            foreach(DataRow item in ds.Tables[0].Rows)
+            try
             {
-                Login_Info login = new Login_Info();
-                if (ID == item["ID"].ToString() && PW == item["PW"].ToString())
+                //sql문
+                string sql = $"select * from {table}";
+                //새 접속선언
+                OracleDataAdapter oda = new OracleDataAdapter();
+                //oracle 관련문 선언
+                oda.SelectCommand = new OracleCommand();
+                //oracle 접속 선언
+                oda.SelectCommand.Connection = OraConn;
+                //sql문 사용
+                oda.SelectCommand.CommandText = sql;
+
+                //데이터셋 선언
+                DataSet ds = new DataSet();
+                //데이터셋을 접속한 DB의 테이블 내용 적용
+                oda.Fill(ds, table);
+
+                login.Clear();
+                // 확인용 i 선언
+                int i = 0;
+                foreach (DataRow item in ds.Tables[0].Rows)
                 {
-                    //정보가 일치시 i 를 1로 변경
-                    i = 1;
-                    //멤버관리창 선언
- 
-                    Vip.Form1 main = new Vip.Form1();
-                    //로그인 창 선언
-                    Form1 Login = new Form1();
-                    //멤버관리창 호출
-                    main.Show();
-                    Login.Hide();
+                    Login_Info login = new Login_Info();
+                    if (ID == item["ID"].ToString() && PW == item["PW"].ToString())
+                    {
+                        //정보가 일치시 i 를 1로 변경
+                        i = 1;
+                        //멤버관리창 선언
+
+                       
+                        OraConn.Close();
+                        return true;
+                        //Login.Hide();
+                        //main.ShowDialog();
+                        //Login.Close();
+
+                    }
                 }
+
+                if (i == 0)
+                {
+                    //모두 비교하여도 i가 0인경우 안내메세지 도출
+                    System.Windows.Forms.MessageBox.Show("아이디 혹은 비밀번호를 확인해주세요.");
+                }
+                OraConn.Close();
+                return false;
             }
-            if (i == 0)
+            catch (Exception)
             {
-                //모두 비교하여도 i가 0인경우 안내메세지 도출
-                System.Windows.Forms.MessageBox.Show("아이디 혹은 비밀번호를 확인해주세요.");
+
+                OraConn.Close();
+                throw;
             }
+            
         }
     }
 }

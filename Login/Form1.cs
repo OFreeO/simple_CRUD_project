@@ -25,8 +25,17 @@ namespace Login
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Manager.Check_User(IDBOX.Text, PWBOX.Text);
-            this.Hide();
+            bool result = Manager.Check_User(IDBOX.Text, PWBOX.Text);
+            if(result)
+            {
+                this.Hide();
+                //Form2 form2 = new Form2();
+                //form2.ShowDialog();
+                Vip.Form1 main = new Vip.Form1();
+                //멤버관리창 호출
+                main.ShowDialog();
+                this.Close();
+            }
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -34,6 +43,15 @@ namespace Login
             if(e.KeyCode == Keys.Enter)
             {
                 button1_Click(sender, e);
+            }
+        }
+
+        private void PWBOX_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button1.PerformClick();
+                //button1_Click(sender, e);
             }
         }
     }

@@ -81,6 +81,7 @@
             this.PWBOX.PasswordChar = '*';
             this.PWBOX.Size = new System.Drawing.Size(147, 21);
             this.PWBOX.TabIndex = 4;
+            this.PWBOX.KeyUp += new System.Windows.Forms.KeyEventHandler(this.PWBOX_KeyUp);
             // 
             // button1
             // 

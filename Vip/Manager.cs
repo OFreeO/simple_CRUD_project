@@ -138,15 +138,20 @@ namespace Vip
 
         public static void executeQuery(string menu, string name, string jumin=null, string phonenum=null, string grade=null)
         {
+            //DB접속
             ConnectDB();
+            //스트링형 쿼리문 공백으로 선언
             string query = "";
 
             try
             {
                 OracleCommand cmd = new OracleCommand();
                 cmd.Connection = OraConn;
+                //입력된 정보를 토대로 Query 함수에 정보 전달
                 query = Query(menu, name, jumin, phonenum, grade);
+                //작성
                 cmd.CommandText = query;
+                
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)

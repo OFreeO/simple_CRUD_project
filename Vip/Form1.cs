@@ -35,6 +35,7 @@ namespace Vip
             timer1.Interval = 1000;
             timer1.Start();
 
+            //로그 조회 관련 세팅
             listView1.View = View.Details;
             listView1.FullRowSelect = true;
             listView1.GridLines = true;
@@ -43,23 +44,25 @@ namespace Vip
         }
         public void Log_Start()
         {
+            //로그 파일 경로 지정
             string local = @"C:\log";
 
+            //파일 이름 지정
             string title = DateTime.Now.ToString("yyyy-MM-dd");
 
             OpenFileDialog ofd = new OpenFileDialog();
-
+            //메모장 형식으로 생성
             ofd.Filter = title + "(*.txt) | *.txt";
-
+            //경로
             ofd.InitialDirectory = local + "\\log";
-
+            //파일 유무 검사
                 if(ofd.ShowDialog() == DialogResult.OK)
                 {
                     listView1.Items.Clear();
 
                     string filename = "";
                     filename = ofd.FileName;
-
+                //없을시 메시지 도출
                     if (!System.IO.File.Exists(filename))
                     {
                         MessageBox.Show("해당 파일이 없습니다");
@@ -67,6 +70,7 @@ namespace Vip
                     }
                     else
                     {
+                    //선택된경우 내용 표시.
                         string[] value = System.IO.File.ReadAllLines(filename);
                         for(int i = 0; i < value.Length; i++)
                         {
@@ -84,24 +88,28 @@ namespace Vip
         {
             try
             {
+                //문자열 2개 선언
                 string checkfolder = "";
                 string filename = "";
 
+                //경로 선언
                 string local = @"C:\log";
 
                 checkfolder = local + "\\log";
 
+                //파일이 존재하지 않을경우 생성
                 if (!System.IO.Directory.Exists(checkfolder))
                 {
                     System.IO.Directory.CreateDirectory(checkfolder);
                 }
-
+                //파일 이름 지정
                 filename = checkfolder + "\\" + DateTime.Now.ToString("yyyy-MM-dd") + ".txt";
-
+                //파일에 내용 작성
                 System.IO.StreamWriter FileWriter = new System.IO.StreamWriter(filename, true);
                 FileWriter.Write(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " : " + M + "\r\n");
 
                 FileWriter.Flush();
+                //작성 종료
                 FileWriter.Close();
 
             }
@@ -136,20 +144,24 @@ namespace Vip
             {
                 if(NameBox.Text == "")
                 {
+                    //이름 확인
                     MessageBox.Show("고객의 이름을 입력해주세요.");
                     return;
                 }
                 if(JuminBox.Text == "")
                 {
+                    //주민번호 확인
                     MessageBox.Show("고객의 주민번호를 입력해주세요.");
                     return;
                 }
                 if (PhoneBox.Text == "")
                 {
+                    //휴대전화 미소지자를 위한 대우
                     PhoneBox.Text = "휴대폰 미소유";
                 }
                 else
                 {
+                    //라디오 체크의 대한 분류
                     if (VVIP.Checked == true)
                     {
                         grade = "VVIP";
@@ -162,13 +174,19 @@ namespace Vip
                     {
                         grade = "일반";
                     }
+                    //함수로 쿼리문 작성
                     Manager.executeQuery("insert", NameBox.Text, JuminBox.Text,
                     PhoneBox.Text, grade);
                     Manager.selectQuery();
+                    //로그에 표시될 내용
                     Log_Info($"{NameBox.Text} 님 등록(등급 : {grade})");
+                    //안내메세지창 띄우기
+                    MessageBox.Show($"{NameBox.Text}님 등록 완료.");
+                    //등록후 텍스트 박스초기화.
                     NameBox.Text = "";
                     JuminBox.Text = "";
                     PhoneBox.Text = "";
+                    //그리드뷰 새로고침
                     refresh();
 
                 }
@@ -188,6 +206,7 @@ namespace Vip
 
         private void Updatebtn_Click(object sender, System.EventArgs e)
         {
+            //회원 추가와 코드가 거의 유사하다
             string grade = "";
             try
             {
@@ -252,6 +271,7 @@ namespace Vip
                     Manager.selectQuery();
                     refresh();
                     Log_Info($"{Del_NameBox.Text} 고객님 해지 처리 완료");
+                    MessageBox.Show($"{Del_NameBox.Text}고객님 해지 처리 완료");
                     Del_JuminBox.Text = "";
                     Del_NameBox.Text = "";
                 }
