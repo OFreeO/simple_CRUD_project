@@ -91,7 +91,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 82);
             this.button1.TabIndex = 5;
-            this.button1.Text = "사용자 로그인";
+            this.button1.Text = "사용자로그인";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
